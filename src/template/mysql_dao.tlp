@@ -1,0 +1,19 @@
+package {DaoSuperPackage};
+
+import java.util.List;
+
+import {EntityPackage};
+
+public interface {DaoName} {
+
+    void insert({EntityName} model);
+    
+    void update({EntityName} model);
+
+    {EntityName} selectById({keyModels});
+    
+    List<{EntityName}> selectList({EntityName} model);
+    
+    void remove({EntityName} model);
+    
+}

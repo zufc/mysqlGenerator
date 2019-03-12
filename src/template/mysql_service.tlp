@@ -1,0 +1,15 @@
+package {ServiceSuperPackage};
+
+import java.util.List;
+import {EntityPackage};
+
+public interface {ServiceName}
+{
+    void create({EntityName} model);
+    
+    void edit({EntityName} model);
+    
+    List<{EntityName}> getList({EntityName} model);
+        
+    void remove({EntityName} model);
+}

@@ -1,0 +1,41 @@
+package {ServiceImplSuperPackage};
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import {ServicePackage};
+import {DaoSuperPackage};
+import {EntityPackage};
+
+@Service
+public class {EntityName}ServiceImpl implements {EntityName}Service
+{   
+    @Autowired
+    private {DaoName} {lDaoName};
+    
+    @Override
+    public void create({EntityName} model)
+    {        
+        {lDaoName}.insert(model);
+    }
+
+    @Override
+    public void edit({EntityName} model)
+    {
+        {lDaoName}.update(model);
+    }
+    
+    @Override
+    public List<{EntityName}> getList({EntityName} model)
+    {
+        return {lDaoName}.selectList(model);
+    }
+
+    @Override
+    public void remove({EntityName} model)
+    {
+        {lDaoName}.update(model);
+    }
+}

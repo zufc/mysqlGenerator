@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="{DaoSuperPackage}.{DaoName}">
+    
+    <insert id="insert" parameterType="{EntityPackage}">
+        INSERT INTO `{TableName}` ({FeildJoin}) VALUES ({FeildMapJoin})
+        {returnKeyId}
+    </insert>
+
+    <update id="update" parameterType="{EntityPackage}">
+        UPDATE `{TableName}` SET {FeildUp} {Key}
+    </update>
+
+    <select id="selectById" resultType="{EntityPackage}">
+        SELECT {FeildJoinAll} FROM `{TableName}` {Key}
+    </select>
+
+    <select id="selectList" resultType="{EntityPackage}">
+        SELECT {FeildJoinAll} FROM `{TableName}`
+    </select>
+
+    <update id="remove" parameterType="{EntityPackage}">
+        UPDATE `{TableName}` SET `dr` = #{dr} where `id` = #{id}
+    </update>
+
+</mapper>

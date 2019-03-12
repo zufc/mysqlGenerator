@@ -1,0 +1,18 @@
+package {package};
+
+import java.io.Serializable;
+{importDate}
+{importTimestamp}
+
+public class {EntityName} implements Serializable 
+{
+    private static final long serialVersionUID = 1L;
+
+{attr_list}
+{attr_getset_list}
+
+    @Override
+    public String toString() {
+        return com.alibaba.fastjson.JSON.toJSONString(this);
+    }
+}
